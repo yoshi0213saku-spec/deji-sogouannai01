@@ -97,33 +97,36 @@
                     <div class="border border-gray-100 rounded-sm">
                         <!-- 太極拳・武術 (リンクあり) -->
                         <a href="https://yoshi0213saku-spec.github.io/meikyo-01/" class="category-item active p-6 block group">
-                            <div class="flex items-start justify-between gap-4">
+                            <!-- sm:flex-rowでPCでは横並び、デフォルト(スマホ)では縦並びに -->
+                            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                                 <div class="min-w-0">
-                                    <span class="serif font-bold text-gray-800 tracking-wide text-lg">【太極拳・武術】</span>
-                                    <div class="mt-2 pl-2 border-l-2 border-blue-500 overflow-hidden">
-                                        <!-- whitespace-nowrapを追加して改行を防止 -->
-                                        <p class="text-sm font-bold text-gray-700 whitespace-nowrap truncate sm:overflow-visible sm:whitespace-normal">明鏡止水：武のKAMIWAZA</p>
-                                        <p class="text-xs text-gray-500 mt-1 italic whitespace-nowrap">〜大相撲 技の秘密〜</p>
+                                    <span class="serif font-bold text-gray-800 tracking-wide text-lg block">【太極拳・武術】</span>
+                                    <div class="mt-2 pl-2 border-l-2 border-blue-500">
+                                        <!-- whitespace-nowrapを維持しつつ、PCでもスマホでも入り切るように調整 -->
+                                        <p class="text-sm font-bold text-gray-700 sm:whitespace-nowrap">明鏡止水：武のKAMIWAZA</p>
+                                        <p class="text-xs text-gray-500 mt-1 italic sm:whitespace-nowrap">〜大相撲 技の秘密〜</p>
                                     </div>
                                 </div>
-                                <span class="text-[10px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0 mt-1">VIEW ARCHIVE →</span>
+                                <div class="flex justify-end sm:block">
+                                    <span class="text-[10px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
+                                </div>
                             </div>
                         </a>
                         
                         <!-- その他のカテゴリー (プレースホルダー) -->
-                        <div class="category-item p-6 flex items-center justify-between group opacity-60">
+                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
                             <span class="serif font-bold text-gray-800 tracking-wide">【地域・歴史】</span>
-                            <span class="text-[10px] text-gray-300">COMING SOON</span>
+                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
                         </div>
                         
-                        <div class="category-item p-6 flex items-center justify-between group opacity-60">
+                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
                             <span class="serif font-bold text-gray-800 tracking-wide">【自然・ガーデニング】</span>
-                            <span class="text-[10px] text-gray-300">COMING SOON</span>
+                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
                         </div>
                         
-                        <div class="category-item p-6 flex items-center justify-between group opacity-60">
+                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
                             <span class="serif font-bold text-gray-800 tracking-wide">【音楽】</span>
-                            <span class="text-[10px] text-gray-300">COMING SOON</span>
+                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
                         </div>
                     </div>
                 </div>
