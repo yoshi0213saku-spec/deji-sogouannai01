@@ -30,17 +30,32 @@
             border: 1px solid #e2e8f0;
         }
 
-        .category-item {
-            transition: all 0.3s ease;
+        .category-folder {
             border-bottom: 1px solid #edf2f7;
         }
 
-        .category-item:last-child {
+        .category-folder:last-child {
             border-bottom: none;
         }
 
-        .category-item.active:hover {
+        .archive-link {
+            transition: all 0.2s ease;
+        }
+
+        .archive-link:hover {
             background-color: #f8fafc;
+            border-color: #3182ce;
+        }
+
+        /* アイコンの基本スタイル */
+        .category-icon {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         /* カスタムスクロールバー */
@@ -65,7 +80,6 @@
             <header class="border-b-4 border-double border-gray-100 p-10 text-center bg-gray-50">
                 <p class="text-[10px] tracking-[0.4em] font-bold text-blue-600 uppercase mb-3">General Information Digital Archive</p>
                 <h1 class="text-3xl font-black tracking-tighter serif mb-2">総合案内デジタル資料館</h1>
-                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
             </header>
 
             <!-- 展示イントロダクション -->
@@ -95,38 +109,98 @@
                     </h2>
                     
                     <div class="border border-gray-100 rounded-sm">
-                        <!-- 太極拳・武術 (リンクあり) -->
-                        <a href="https://yoshi0213saku-spec.github.io/meikyo-01/" class="category-item active p-6 block group">
-                            <!-- sm:flex-rowでPCでは横並び、デフォルト(スマホ)では縦並びに -->
-                            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                                <div class="min-w-0">
-                                    <span class="serif font-bold text-gray-800 tracking-wide text-lg block">【太極拳・武術】</span>
-                                    <div class="mt-2 pl-2 border-l-2 border-blue-500">
-                                        <!-- whitespace-nowrapを維持しつつ、PCでもスマホでも入り切るように調整 -->
-                                        <p class="text-sm font-bold text-gray-700 sm:whitespace-nowrap">明鏡止水：武のKAMIWAZA</p>
-                                        <p class="text-xs text-gray-500 mt-1 italic sm:whitespace-nowrap">〜大相撲 技の秘密〜</p>
+                        
+                        <!-- 【太極拳・武術】フォルダ -->
+                        <div class="category-folder p-6">
+                            <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-4 flex items-center">
+                                <!-- 武術を象徴する剣のアイコン -->
+                                <span class="text-blue-600 mr-3">
+                                    <svg class="category-icon" viewBox="0 0 24 24">
+                                        <path d="M14.5 17.5 3 6V3h3l11.5 11.5"></path>
+                                        <path d="m13 19 6-6"></path>
+                                        <path d="m16 22 5-5"></path>
+                                        <circle cx="6" cy="18" r="2"></circle>
+                                    </svg>
+                                </span>
+                                【太極拳・武術】
+                            </h3>
+                            
+                            <div class="space-y-3 ml-2">
+                                <!-- 01: 明鏡止水 -->
+                                <a href="https://yoshi0213saku-spec.github.io/meikyo-01/" class="archive-link block p-4 border border-gray-100 rounded-sm group">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                        <div class="min-w-0">
+                                            <p class="text-sm font-bold text-gray-700 sm:whitespace-nowrap">明鏡止水：武のKAMIWAZA</p>
+                                            <p class="text-[11px] text-gray-400 mt-1 italic whitespace-nowrap">〜大相撲 技の秘密〜</p>
+                                        </div>
+                                        <span class="text-[9px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
                                     </div>
-                                </div>
-                                <div class="flex justify-end sm:block">
-                                    <span class="text-[10px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
-                                </div>
+                                </a>
+
+                                <!-- 02: 太極拳論 -->
+                                <a href="https://yoshi0213saku-spec.github.io/ousougaku01/" class="archive-link block p-4 border border-gray-100 rounded-sm group">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                        <div class="min-w-0">
+                                            <p class="text-sm font-bold text-gray-700 sm:whitespace-nowrap">「王宗岳 太極拳論」</p>
+                                            <p class="text-[11px] text-gray-400 mt-1 italic whitespace-nowrap">〜太極拳の聖典〜</p>
+                                        </div>
+                                        <span class="text-[9px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        
-                        <!-- その他のカテゴリー (プレースホルダー) -->
-                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
-                            <span class="serif font-bold text-gray-800 tracking-wide">【地域・歴史】</span>
-                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
                         </div>
                         
-                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
-                            <span class="serif font-bold text-gray-800 tracking-wide">【自然・ガーデニング】</span>
-                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
+                        <!-- その他のカテゴリー -->
+                        <div class="category-folder p-6 opacity-60">
+                            <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
+                                <span class="flex items-center">
+                                    <!-- 歴史を象徴する歴史的建造物（神社・鳥居）のアイコン -->
+                                    <span class="text-blue-600 mr-3">
+                                        <svg class="category-icon" viewBox="0 0 24 24">
+                                            <path d="M3 10h18"></path>
+                                            <path d="M5 6h14"></path>
+                                            <path d="M6 10v10"></path>
+                                            <path d="M18 10v10"></path>
+                                            <path d="M2 14h20"></path>
+                                        </svg>
+                                    </span>
+                                    【地域・歴史】
+                                </span>
+                                <span class="text-[9px] text-gray-300 font-bold tracking-[0.2em]">COMING SOON</span>
+                            </h3>
                         </div>
                         
-                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
-                            <span class="serif font-bold text-gray-800 tracking-wide">【音楽】</span>
-                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
+                        <div class="category-folder p-6 opacity-60">
+                            <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
+                                <span class="flex items-center">
+                                    <!-- 自然を象徴する葉のアイコン -->
+                                    <span class="text-blue-600 mr-3">
+                                        <svg class="category-icon" viewBox="0 0 24 24">
+                                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a13 13 0 0 1-13 13L11 20z"></path>
+                                            <path d="M9 13c0 5 3.5 7 5 7"></path>
+                                        </svg>
+                                    </span>
+                                    【自然・ガーデニング】
+                                </span>
+                                <span class="text-[9px] text-gray-300 font-bold tracking-[0.2em]">COMING SOON</span>
+                            </h3>
+                        </div>
+                        
+                        <div class="category-folder p-6 opacity-60">
+                            <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
+                                <span class="flex items-center">
+                                    <!-- 音楽を象徴する音符のアイコン -->
+                                    <span class="text-blue-600 mr-3">
+                                        <svg class="category-icon" viewBox="0 0 24 24">
+                                            <path d="M9 18V5l12-2v13"></path>
+                                            <circle cx="6" cy="18" r="3"></circle>
+                                            <circle cx="18" cy="16" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                    【音楽】
+                                </span>
+                                <span class="text-[9px] text-gray-300 font-bold tracking-[0.2em]">COMING SOON</span>
+                            </h3>
                         </div>
                     </div>
                 </div>
