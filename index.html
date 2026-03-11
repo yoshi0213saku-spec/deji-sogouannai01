@@ -108,12 +108,11 @@
                         Collections / 収蔵区分
                     </h2>
                     
-                    <div class="border border-gray-100 rounded-sm">
+                    <div class="border border-gray-100 rounded-sm overflow-hidden">
                         
                         <!-- 【太極拳・武術】フォルダ -->
                         <div class="category-folder p-6">
                             <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-4 flex items-center">
-                                <!-- 武術を象徴する剣のアイコン -->
                                 <span class="text-blue-600 mr-3">
                                     <svg class="category-icon" viewBox="0 0 24 24">
                                         <path d="M14.5 17.5 3 6V3h3l11.5 11.5"></path>
@@ -125,26 +124,30 @@
                                 【太極拳・武術】
                             </h3>
                             
-                            <div class="space-y-3 ml-2">
+                            <div class="space-y-3">
                                 <!-- 01: 明鏡止水 -->
                                 <a href="https://yoshi0213saku-spec.github.io/meikyo-01/" class="archive-link block p-4 border border-gray-100 rounded-sm group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                         <div class="min-w-0">
-                                            <p class="text-sm font-bold text-gray-700 sm:whitespace-nowrap">明鏡止水：武のKAMIWAZA</p>
+                                            <p class="text-[13px] sm:text-sm font-bold text-gray-700 whitespace-nowrap">明鏡止水：武のKAMIWAZA</p>
                                             <p class="text-[11px] text-gray-400 mt-1 italic whitespace-nowrap">〜大相撲 技の秘密〜</p>
                                         </div>
-                                        <span class="text-[9px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
+                                        <div class="flex justify-end">
+                                            <span class="text-[9px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
+                                        </div>
                                     </div>
                                 </a>
 
                                 <!-- 02: 太極拳論 -->
                                 <a href="https://yoshi0213saku-spec.github.io/ousougaku01/" class="archive-link block p-4 border border-gray-100 rounded-sm group">
-                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                         <div class="min-w-0">
-                                            <p class="text-sm font-bold text-gray-700 sm:whitespace-nowrap">「王宗岳 太極拳論」</p>
+                                            <p class="text-[13px] sm:text-sm font-bold text-gray-700 whitespace-nowrap">「王宗岳 太極拳論」</p>
                                             <p class="text-[11px] text-gray-400 mt-1 italic whitespace-nowrap">〜太極拳の聖典〜</p>
                                         </div>
-                                        <span class="text-[9px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
+                                        <div class="flex justify-end">
+                                            <span class="text-[9px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
+                                        </div>
                                     </div>
                                 </a>
                             </div>
@@ -154,7 +157,6 @@
                         <div class="category-folder p-6 opacity-60">
                             <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
                                 <span class="flex items-center">
-                                    <!-- 歴史を象徴する歴史的建造物（神社・鳥居）のアイコン -->
                                     <span class="text-blue-600 mr-3">
                                         <svg class="category-icon" viewBox="0 0 24 24">
                                             <path d="M3 10h18"></path>
@@ -173,7 +175,6 @@
                         <div class="category-folder p-6 opacity-60">
                             <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
                                 <span class="flex items-center">
-                                    <!-- 自然を象徴する葉のアイコン -->
                                     <span class="text-blue-600 mr-3">
                                         <svg class="category-icon" viewBox="0 0 24 24">
                                             <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a13 13 0 0 1-13 13L11 20z"></path>
@@ -189,7 +190,6 @@
                         <div class="category-folder p-6 opacity-60">
                             <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
                                 <span class="flex items-center">
-                                    <!-- 音楽を象徴する音符のアイコン -->
                                     <span class="text-blue-600 mr-3">
                                         <svg class="category-icon" viewBox="0 0 24 24">
                                             <path d="M9 18V5l12-2v13"></path>
@@ -224,6 +224,20 @@
                         <a href="mailto:yoshi0213.saku@gmail.com" class="text-[11px] text-blue-500 hover:text-blue-700 underline">
                             yoshi0213.saku@gmail.com
                         </a>
+                    </div>
+
+                    <!-- TOTAL VISITOR セクション (視認性を高めた調整) -->
+                    <div class="mt-10 mb-4 pt-6 border-t border-gray-200/40">
+                        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] mb-2">Total Visitor</p>
+                        <div class="inline-flex items-center space-x-1 bg-white/50 px-3 py-2 rounded border border-gray-200/50 shadow-sm">
+                            <!-- 各桁を個別の枠で表示し、よりはっきりと -->
+                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">0</span>
+                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">0</span>
+                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">0</span>
+                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">2</span>
+                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">5</span>
+                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">4</span>
+                        </div>
                     </div>
                     
                     <p class="text-[8px] text-gray-300 mt-6 tracking-widest uppercase">
