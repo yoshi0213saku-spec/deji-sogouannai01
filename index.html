@@ -113,7 +113,7 @@
                         <!-- 【太極拳・武術】フォルダ -->
                         <div class="category-folder p-6">
                             <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-4 flex items-center">
-                                <span class="text-blue-600 mr-3">
+                                <span class="text-blue-600 mr-3 shrink-0">
                                     <svg class="category-icon" viewBox="0 0 24 24">
                                         <path d="M14.5 17.5 3 6V3h3l11.5 11.5"></path>
                                         <path d="m13 19 6-6"></path>
@@ -121,7 +121,7 @@
                                         <circle cx="6" cy="18" r="2"></circle>
                                     </svg>
                                 </span>
-                                【太極拳・武術】
+                                <span class="whitespace-nowrap">【太極拳・武術】</span>
                             </h3>
                             
                             <div class="space-y-3">
@@ -153,11 +153,11 @@
                             </div>
                         </div>
                         
-                        <!-- その他のカテゴリー -->
+                        <!-- その他のカテゴリー (レイアウト崩れ対策版) -->
                         <div class="category-folder p-6 opacity-60">
-                            <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
-                                <span class="flex items-center">
-                                    <span class="text-blue-600 mr-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                <h3 class="serif font-bold text-gray-800 tracking-wide text-lg flex items-center">
+                                    <span class="text-blue-600 mr-3 shrink-0">
                                         <svg class="category-icon" viewBox="0 0 24 24">
                                             <path d="M3 10h18"></path>
                                             <path d="M5 6h14"></path>
@@ -166,41 +166,47 @@
                                             <path d="M2 14h20"></path>
                                         </svg>
                                     </span>
-                                    【地域・歴史】
-                                </span>
-                                <span class="text-[9px] text-gray-300 font-bold tracking-[0.2em]">COMING SOON</span>
-                            </h3>
+                                    <span class="whitespace-nowrap">【地域・歴史】</span>
+                                </h3>
+                                <div class="flex justify-end sm:block">
+                                    <span class="text-[9px] text-gray-400 font-bold tracking-[0.2em]">COMING SOON</span>
+                                </div>
+                            </div>
                         </div>
                         
                         <div class="category-folder p-6 opacity-60">
-                            <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
-                                <span class="flex items-center">
-                                    <span class="text-blue-600 mr-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                <h3 class="serif font-bold text-gray-800 tracking-wide text-lg flex items-center">
+                                    <span class="text-blue-600 mr-3 shrink-0">
                                         <svg class="category-icon" viewBox="0 0 24 24">
                                             <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8a13 13 0 0 1-13 13L11 20z"></path>
                                             <path d="M9 13c0 5 3.5 7 5 7"></path>
                                         </svg>
                                     </span>
-                                    【自然・ガーデニング】
-                                </span>
-                                <span class="text-[9px] text-gray-300 font-bold tracking-[0.2em]">COMING SOON</span>
-                            </h3>
+                                    <span class="whitespace-nowrap">【自然・ガーデニング】</span>
+                                </h3>
+                                <div class="flex justify-end sm:block">
+                                    <span class="text-[9px] text-gray-400 font-bold tracking-[0.2em]">COMING SOON</span>
+                                </div>
+                            </div>
                         </div>
                         
                         <div class="category-folder p-6 opacity-60">
-                            <h3 class="serif font-bold text-gray-800 tracking-wide text-lg mb-1 flex items-center justify-between">
-                                <span class="flex items-center">
-                                    <span class="text-blue-600 mr-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                                <h3 class="serif font-bold text-gray-800 tracking-wide text-lg flex items-center">
+                                    <span class="text-blue-600 mr-3 shrink-0">
                                         <svg class="category-icon" viewBox="0 0 24 24">
                                             <path d="M9 18V5l12-2v13"></path>
                                             <circle cx="6" cy="18" r="3"></circle>
                                             <circle cx="18" cy="16" r="3"></circle>
                                         </svg>
                                     </span>
-                                    【音楽】
-                                </span>
-                                <span class="text-[9px] text-gray-300 font-bold tracking-[0.2em]">COMING SOON</span>
-                            </h3>
+                                    <span class="whitespace-nowrap">【音楽】</span>
+                                </h3>
+                                <div class="flex justify-end sm:block">
+                                    <span class="text-[9px] text-gray-400 font-bold tracking-[0.2em]">COMING SOON</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -226,17 +232,16 @@
                         </a>
                     </div>
 
-                    <!-- TOTAL VISITOR セクション (視認性を高めた調整) -->
+                    <!-- TOTAL VISITOR (はっきりとしたデザインに更新) -->
                     <div class="mt-10 mb-4 pt-6 border-t border-gray-200/40">
-                        <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.3em] mb-2">Total Visitor</p>
-                        <div class="inline-flex items-center space-x-1 bg-white/50 px-3 py-2 rounded border border-gray-200/50 shadow-sm">
-                            <!-- 各桁を個別の枠で表示し、よりはっきりと -->
-                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">0</span>
-                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">0</span>
-                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">0</span>
-                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">2</span>
-                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">5</span>
-                            <span class="w-5 h-6 flex items-center justify-center bg-gray-100 border border-gray-200 text-gray-500 text-[11px] font-mono rounded-sm">4</span>
+                        <p class="text-[9px] text-gray-500 font-bold uppercase tracking-[0.3em] mb-3">Total Visitor</p>
+                        <div class="inline-flex items-center space-x-1 bg-white px-3 py-2 rounded-md border border-gray-300 shadow-sm">
+                            <span class="w-5 h-7 flex items-center justify-center bg-gray-50 border border-gray-200 text-gray-600 text-[13px] font-mono font-bold rounded shadow-inner">0</span>
+                            <span class="w-5 h-7 flex items-center justify-center bg-gray-50 border border-gray-200 text-gray-600 text-[13px] font-mono font-bold rounded shadow-inner">0</span>
+                            <span class="w-5 h-7 flex items-center justify-center bg-gray-50 border border-gray-200 text-gray-600 text-[13px] font-mono font-bold rounded shadow-inner">0</span>
+                            <span class="w-5 h-7 flex items-center justify-center bg-gray-50 border border-gray-200 text-gray-600 text-[13px] font-mono font-bold rounded shadow-inner">2</span>
+                            <span class="w-5 h-7 flex items-center justify-center bg-gray-50 border border-gray-200 text-gray-600 text-[13px] font-mono font-bold rounded shadow-inner">5</span>
+                            <span class="w-5 h-7 flex items-center justify-center bg-gray-50 border border-gray-200 text-gray-600 text-[13px] font-mono font-bold rounded shadow-inner">4</span>
                         </div>
                     </div>
                     
