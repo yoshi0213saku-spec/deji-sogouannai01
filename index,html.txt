@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>総合案内デジタル資料館 - アーカイブ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f4f1ea; /* 紙のような質感のベージュ */
+            color: #2d3748;
+        }
+
+        .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        .archive-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .museum-card {
+            background: #ffffff;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .category-item {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .category-item:last-child {
+            border-bottom: none;
+        }
+
+        .category-item.active:hover {
+            background-color: #f8fafc;
+        }
+
+        /* カスタムスクロールバー */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="py-12 px-4">
+
+    <div class="archive-container">
+        <div class="museum-card overflow-hidden">
+            
+            <!-- アーカイブ・ヘッダー -->
+            <header class="border-b-4 border-double border-gray-100 p-10 text-center bg-gray-50">
+                <p class="text-[10px] tracking-[0.4em] font-bold text-blue-600 uppercase mb-3">General Information Digital Archive</p>
+                <h1 class="text-3xl font-black tracking-tighter serif mb-2">総合案内デジタル資料館</h1>
+                <div class="w-16 h-1 bg-blue-600 mx-auto"></div>
+            </header>
+
+            <!-- 展示イントロダクション -->
+            <section class="p-8 md:p-10 bg-white">
+                <div class="mb-12">
+                    <h2 class="text-sm font-bold text-gray-400 mb-5 flex items-center">
+                        <span class="w-4 h-px bg-gray-300 mr-2"></span>
+                        アーカイブ概要
+                    </h2>
+                    <div class="text-[14px] leading-relaxed text-gray-700 serif space-y-4">
+                        <p>
+                            本資料館では、太極拳や武術を中心としたさまざまな映像・資料を、現代のAI技術によって解析しています。
+                        </p>
+                        <p>
+                            その内容を、音声や動画による解説として整理・収蔵し、学びを深めるためのデジタル資料として公開しています。
+                        </p>
+                        <p>
+                            AIとともに、新しい視点から太極拳と武術の世界を探究することを目的としています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 収蔵カテゴリー一覧 -->
+                <div class="mb-6">
+                    <h2 class="text-[10px] font-bold text-gray-400 mb-4 uppercase tracking-[0.2em] flex items-center">
+                        Collections / 収蔵区分
+                    </h2>
+                    
+                    <div class="border border-gray-100 rounded-sm">
+                        <!-- 太極拳・武術 (リンクあり) -->
+                        <a href="https://yoshi0213saku-spec.github.io/meikyo-01/" class="category-item active p-6 block group">
+                            <!-- sm:flex-rowでPCでは横並び、デフォルト(スマホ)では縦並びに -->
+                            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                                <div class="min-w-0">
+                                    <span class="serif font-bold text-gray-800 tracking-wide text-lg block">【太極拳・武術】</span>
+                                    <div class="mt-2 pl-2 border-l-2 border-blue-500">
+                                        <!-- whitespace-nowrapを維持しつつ、PCでもスマホでも入り切るように調整 -->
+                                        <p class="text-sm font-bold text-gray-700 sm:whitespace-nowrap">明鏡止水：武のKAMIWAZA</p>
+                                        <p class="text-xs text-gray-500 mt-1 italic sm:whitespace-nowrap">〜大相撲 技の秘密〜</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-end sm:block">
+                                    <span class="text-[10px] text-blue-400 font-bold group-hover:translate-x-1 transition-transform shrink-0">VIEW ARCHIVE →</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <!-- その他のカテゴリー (プレースホルダー) -->
+                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
+                            <span class="serif font-bold text-gray-800 tracking-wide">【地域・歴史】</span>
+                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
+                        </div>
+                        
+                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
+                            <span class="serif font-bold text-gray-800 tracking-wide">【自然・ガーデニング】</span>
+                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
+                        </div>
+                        
+                        <div class="category-item p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 group opacity-60">
+                            <span class="serif font-bold text-gray-800 tracking-wide">【音楽】</span>
+                            <span class="text-[10px] text-gray-300 text-right">COMING SOON</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-gray-50 text-center">
+                    <div class="inline-block px-4 py-1 border border-gray-200 rounded-full">
+                        <p class="text-[10px] text-gray-400 font-medium">AI Analysis & Digital Curation</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 資料館・運営情報 -->
+            <footer class="bg-gray-50 p-8 border-t border-gray-100">
+                <div class="text-center">
+                    <p class="text-[9px] text-gray-400 font-bold uppercase tracking-[0.2em] mb-4 italic">Archivist Information</p>
+                    <p class="text-[11px] text-gray-500 mb-1">総合案内 資料館 運営責任者</p>
+                    <p class="text-base font-bold text-gray-800 mb-1 serif">中島 義健</p>
+                    <p class="text-[11px] text-gray-600">日本武術太極拳連盟 会員</p>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-200/50">
+                        <a href="mailto:yoshi0213.saku@gmail.com" class="text-[11px] text-blue-500 hover:text-blue-700 underline">
+                            yoshi0213.saku@gmail.com
+                        </a>
+                    </div>
+                    
+                    <p class="text-[8px] text-gray-300 mt-6 tracking-widest uppercase">
+                        &copy; 2024 General Information Digital Archive Project. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
